@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <style>
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            /* filter: grayscale(1); */
+            transition: filter 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <!-- Botón de menú (pon aquí la ruta de tu imagen) -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <img src="elementos_visuales\3_lineas.png" alt="Abrir menú">
+        </button>
+        <!-- Menú lateral oculto -->
+        <nav class="side-menu" id="sideMenu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Filtros</a></li>
+            </ul>
+        </nav>
+        <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar ofertas...">
+        <button class="search-btn">
+            <img src="elementos_visuales\icone-loupe-gris.png" alt="Buscar">
+        </button>
+    </div>
+
+    <!-- Barra de filtros -->
+    <div class="filter-bar">
+        <select class="filter-select">
+            <option value="">Municipio</option>
+            <option value="municipio1">Municipio 1</option>
+            <option value="municipio2">Municipio 2</option>
+            <option value="municipio3">Municipio 3</option>
+        </select>
+        <select class="filter-select">
+            <option value="">Fecha</option>
+            <option value="hoy">Hoy</option>
+            <option value="esta_semana">Esta semana</option>
+            <option value="este_mes">Este mes</option>
+        </select>
+        <select class="filter-select">
+            <option value="">Jornada</option>
+            <option value="matutina">Matutina</option>
+            <option value="vespertina">Vespertina</option>
+            <option value="nocturna">Nocturna</option>
+        </select>
+        <select class="filter-select">
+            <option value="">Categoría</option>
+            <option value="categoria1">Categoría 1</option>
+            <option value="categoria2">Categoría 2</option>
+            <option value="categoria3">Categoría 3</option>
+        </select>
+        <select class="filter-select">
+            <option value="">Otro filtro</option>
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+        </select>
+    </div>
+
+    <main>
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter1" name="no-filter1">
+                <label for="no-filter1">Sin filtro</label>
+            </div>
+        </section>
+
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter2" name="no-filter2">
+                <label for="no-filter2">Sin filtro</label>
+            </div>
+        </section>
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter3" name="no-filter3">
+                <label for="no-filter3">Sin filtro</label>
+            </div>
+        </section>
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter4" name="no-filter4">
+                <label for="no-filter4">Sin filtro</label>
+            </div>
+        </section>
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter5" name="no-filter5">
+                <label for="no-filter5">Sin filtro</label>
+            </div>
+        </section>
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter6" name="no-filter6">
+                <label for="no-filter6">Sin filtro</label>
+            </div>
+        </section>
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter7" name="no-filter7">
+                <label for="no-filter7">Sin filtro</label>
+            </div>
+        </section>
+        <section class="offer">
+            <h2>Título de la oferta</h2>
+            <p><strong>Nombre de la empresa:</strong> Nombre de la empresa</p>
+            <p><strong>Precio:</strong> $17,000 - usado</p>
+            <p><strong>Fecha de Publicación:</strong> [Fecha]</p>
+            <button onclick="saveOffer()">Guardar</button>
+            <button onclick="suggestFilters()">Sugerir Filtros</button>
+            <div class="filter-option">
+                <input type="checkbox" id="no-filter8" name="no-filter8">
+                <label for="no-filter8">Sin filtro</label>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>Proyecto POO</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="#">Inicio</a>
+                <a href="#">Catálogo</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Contacto</a>
+            </nav>
+            <div class="footer-social">
+                <a href="#" title="Twitter"><img src="elementos_visuales\twitter-x-logo.png" alt="Twitter" /></a>
+                <a href="#" title="Facebook"><img src="elementos_visuales\Facebook_Logo.png" alt="Facebook" /></a>
+                <a href="#" title="Instagram"><img src="elementos_visuales\Instagram_logo.png" alt="Instagram" /></a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 2025 Proyecto POO. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script>
+        function saveOffer() {
+            alert("Oferta guardada!");
+        }
+        function suggestFilters() {
+            alert("Filtros sugeridos!");
+        }
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            const overlay = document.getElementById('menuOverlay');
+            menu.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
